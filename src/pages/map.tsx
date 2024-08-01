@@ -1,21 +1,13 @@
-import Leaflet from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 import { Link } from "react-router-dom";
 import { FiPlus, FiArrowRight } from "react-icons/fi";
 
 import MapPin from "/pin.svg";
+import { MapIcon } from "../components/";
 import type { OrphanagePoint } from "../types/";
 
 import "leaflet/dist/leaflet.css";
-
-const MapIcon = Leaflet.icon({
-  iconUrl: MapPin,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
 
 const env = import.meta.env;
 
