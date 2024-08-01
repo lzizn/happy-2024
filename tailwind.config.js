@@ -7,7 +7,7 @@ export default {
     extend: {
       backgroundImage: {
         landing: "url('/landing.svg')",
-        landingGradient: "linear-gradient(329.54deg, #8E6DE5 0%, #9066FF 100%)",
+        landingGradient: "linear-gradient(329.54deg, #614a9c 0%, #9066FF 100%)",
       },
     },
     colors: {
