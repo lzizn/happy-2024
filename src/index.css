@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #ebf2f5;
+}
+body, input, button, textarea {
+  font: 600 18px Nunito, sans-serif;
+}
+
 @layer components {
   .orphanage-pin {
     background-color: white;
@@ -24,7 +37,6 @@
     font-size: 20px;
     font-weight: bold;
   }
-
   .orphanage-pin .leaflet-popup-content a {
     width: 40px;
     height: 40px;
@@ -36,21 +48,85 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
+  }
   .orphanage-pin .leaflet-popup-tip-container{
     display: none;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  color: #fff;
-  background: #ebf2f5;
-}
-body, input, button, textarea {
-  font: 600 18px Nunito, sans-serif;
+
+  .orphanage-create-form {
+    @apply w-[700px] my-16 mx-auto bg-white border border-slate-200 rounded-2xl py-16 px-10 overflow-hidden
+  }
+  .orphanage-create-form fieldset {
+    @apply border-0
+  }
+  .orphanage-create-form fieldset + fieldset {
+    @apply mt-[80px]
+  }
+  .orphanage-create-form fieldset legend {
+    @apply w-full text-3xl text-zinc-500 font-semibold border-b border-solid border-slate-200 mb-10 pb-6
+  }
+
+  /* * Form Fields in general, including type=file */
+  .form-field input,
+  .form-field textarea {
+    @apply w-full bg-slate-100 border-slate-200 border border-solid rounded-2xl outline-none text-zinc-600
+  }
+  .form-field input {
+    @apply h-16 py-0 px-4
+  }
+  .form-field + .form-field {
+    @apply mt-10
+  }
+  .form-field label {
+    @apply flex text-zinc-600 mb-2 leading-6
+  }
+  .form-field label span {
+    @apply text-sm text-zinc-600 ml-6 leading-6
+  }
+  .form-field textarea {
+    @apply min-h-32 max-h-60 resize-y p-4 leading-6
+  }
+  .form-field input[type=file]{
+    visibility: hidden;
+  }
+
+  /* * Switch for Yes/No (Open on Weekends) */
+  .switch {
+    @apply grid grid-cols-2
+  }
+  .switch button {
+    @apply  h-16 bg-slate-200 border border-solid border-slate-200 text-zinc-600 cursor-pointer
+  }
+  .switch button.active {
+    @apply bg-emerald-50 border border-solid border-emerald-200 text-emerald-500
+  }
+  .switch button:first-child {
+    border-radius: 20px 0px 0px 20px;
+  }
+  .switch button:last-child {
+    border-radius: 0 20px 20px 0;
+    border-left: 0;
+  }
+
+  /* * Container for Previews */
+  .images-preview-container {
+    @apply grid grid-cols-5 gap-4
+  }
+  .images-preview-container img {
+    @apply w-full h-full object-cover rounded-3xl
+  }
+  .images-preview-container .delete-preview-image {
+    @apply p-2 absolute top-0 right-0 z-10 border border-solid border-slate-200 bg-white rounded-tr-3xl rounded-bl-3xl cursor-pointer hover:bg-red-100
+  }
+  .images-preview-container .new-image {
+    @apply  flex justify-center items-center h-24 bg-slate-200 border border-solid border-slate-200 rounded-2xl cursor-pointer
+  }
+
+  /* * Submit Button */
+  .orphanage-create-submit {
+    @apply flex items-center justify-center w-full h-16 border-0 cursor-pointer bg-emerald-400 rounded-2xl text-white transition-all mt-14
+  }
+  .orphanage-create-submit:hover {
+    @apply bg-emerald-500
+  }
 }

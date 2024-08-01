@@ -13,7 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<Map />} />
-        <Route path="/orphanages" element={<OrphanageCreate />} />
+        <Route path="/orphanages/create" element={<OrphanageCreate />} />
         <Route path="/orphanages/:orphanageId" element={<Orphanage />} />
       </Routes>
     </BrowserRouter>

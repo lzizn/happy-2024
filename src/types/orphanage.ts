@@ -11,7 +11,7 @@ export interface Orphanage {
   description: string;
   instructions: string;
   opening_hours: string;
-  open_on_weekends: string;
+  open_on_weekends: boolean;
   latitude: number;
   longitude: number;
   images: {
