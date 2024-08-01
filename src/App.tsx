@@ -5,6 +5,8 @@ import Home from "./pages/home";
 import Orphanage from "./pages/orphanage";
 import OrphanageCreate from "./pages/orphanage-create";
 
+import "./index.css";
+
 export default function App() {
   return (
     <BrowserRouter>
