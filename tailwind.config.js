@@ -1,3 +1,5 @@
+import colors from "tailwindcss/colors";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,6 +11,7 @@ export default {
       },
     },
     colors: {
+      ...colors,
       "royal-purple": "#8E6DE5",
       "royal-purple-darker": "#9066FF",
       "yellow-main": "#ffd666",
