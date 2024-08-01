@@ -1,20 +1,18 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 import { Link } from "react-router-dom";
 import { FiPlus, FiArrowRight } from "react-icons/fi";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 import MapPin from "/pin.svg";
+
 import { MapIcon } from "../components/";
 import type { OrphanagePoint } from "../types/";
-
-import "leaflet/dist/leaflet.css";
+import { defaultCenter, defaultZoom } from "../constants/";
 
 const env = import.meta.env;
 
 export default function OrphanagesMap() {
-  const defaultCenter = [-20.3148937, -40.3381767] as [number, number];
-  const defaultZoom = 10;
-
   const orphanages: OrphanagePoint[] = [
     {
       id: "66aab94c4fc33c3c39d51110",
