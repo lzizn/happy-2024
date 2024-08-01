@@ -15,12 +15,8 @@ export const Sidebar = () => {
         onClick={() => navigate(-1)}
       />
 
-      <footer className="w-12 h-12 flex justify-center items-center border-0 bg-landingGradient rounded-2xl cursor-pointer transition-all">
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="hover:bg-royal-purple-darker"
-        >
+      <footer className="w-12 h-12 flex justify-center items-center border-0 bg-royal-purple/50 rounded-2xl cursor-pointer transition-all hover:bg-royal-purple-darker">
+        <button type="button" onClick={() => navigate(-1)}>
           <FiArrowLeft size={24} color="#FFF" />
         </button>
       </footer>

@@ -17,40 +17,25 @@ body, input, button, textarea {
 
 @layer components {
   .orphanage-pin {
-    background-color: white;
-    border-radius: theme('borderRadius.3xl');
-    box-shadow: theme('boxShadow.xl');
+    @apply bg-white rounded-3xl shadow-xl;
   }
   .orphanage-pin .leaflet-popup-content-wrapper{
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    box-shadow: none;
+    @apply bg-white/80 rounded-2xl shadow-none;
   } 
   .orphanage-pin .leaflet-popup-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin: 8px 12px;
-
-    color: theme('colors.royal-purple-darker');
-    font-size: 20px;
-    font-weight: bold;
+    @apply flex justify-between items-center my-2 my-3 text-royal-purple-darker text-xl font-bold;
   }
   .orphanage-pin .leaflet-popup-content a {
-    width: 40px;
-    height: 40px;
-    background: theme('colors.royal-purple-darker');
-
-    box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply w-10 h-10 flex justify-center items-center bg-royal-purple/90 rounded-xl transition-all;
   }
-  .orphanage-pin .leaflet-popup-tip-container{
-    display: none;
+  .orphanage-pin .leaflet-popup-content a:hover {
+    @apply bg-royal-purple-darker;
+  }
+  .orphanage-pin .leaflet-popup-tip-container {
+    @apply hidden;
+  }
+  .create-orphanage-button {
+    @apply z-[9999] absolute right-10 bottom-10 flex justify-center items-center w-16 h-16 rounded-3xl bg-landingGradient transition-all
   }
 
   .orphanage-create-form {

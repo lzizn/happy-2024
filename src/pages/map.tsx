@@ -90,7 +90,8 @@ export default function OrphanagesMap() {
 
       <Link
         to="/orphanages/create"
-        className="z-[9999] absolute right-10 bottom-10 flex justify-center items-center w-16 h-16 bg-royal-purple-darker rounded-3xl transition-all"
+        className="create-orphanage-button"
+        aria-label="Create orphanage button. Click to be redirected to Create Orphanage page"
       >
         <FiPlus size={32} color="#FFF" />
       </Link>
